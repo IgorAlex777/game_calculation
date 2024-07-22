@@ -37,7 +37,7 @@ android {
 
 dependencies {
     //start
-
+    implementation ("androidx.fragment:fragment-ktx:1.8.0")
     //stop
 
     implementation("androidx.core:core-ktx:1.13.1")
