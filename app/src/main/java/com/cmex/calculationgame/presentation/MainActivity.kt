@@ -1,4 +1,4 @@
-package com.cmex.calculationgame
+package com.cmex.calculationgame.presentation
 
 import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity

@@ -1,4 +1,4 @@
-package com.cmex.calculationgame
+package com.cmex.calculationgame.data
 
 
 import android.content.Context
@@ -15,6 +15,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import com.cmex.calculationgame.R
 
 
 import com.google.android.material.behavior.SwipeDismissBehavior
