@@ -24,7 +24,7 @@ import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.Calendar
 
-/*
+
 fun AppCompatActivity.utilOpenFragment(fragment: Fragment,name: String?){
     if(supportFragmentManager.fragments.isNotEmpty()){
         if(supportFragmentManager.fragments[0].javaClass==fragment.javaClass){
@@ -45,7 +45,6 @@ fun AppCompatActivity.utilOpenFragment(fragment: Fragment,name: String?){
          .addToBackStack(name)
          .commit()
  }
-*/
 
 fun Fragment.myToast(string: String) {
     Toast.makeText(activity, string, Toast.LENGTH_SHORT).show()

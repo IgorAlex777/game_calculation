@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.cmex.calculationgame.data.GameExecutionImpl
 import com.cmex.calculationgame.data.myLog
+import com.cmex.calculationgame.data.utilOpenFragment
 import com.cmex.calculationgame.databinding.ActivityMainBinding
 import com.cmex.calculationgame.domain.entity.Question
+import com.cmex.calculationgame.presentation.fragments.FragmentPresentation
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding:ActivityMainBinding
@@ -19,11 +21,8 @@ class MainActivity : AppCompatActivity() {
         init()
     }
     private fun init(){
-        editTextView()
+        utilOpenFragment(FragmentPresentation.newInstance(),"a")
         question=GameExecutionImpl.onGenerateQuestion(99,8)
+    }
 
-    }
-    private fun editTextView(){
-        binding.tvTextMain.text="Github проба"
-    }
 }
