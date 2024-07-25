@@ -1,5 +1,6 @@
 package com.cmex.calculationgame.data
 
+import android.annotation.SuppressLint
 import com.cmex.calculationgame.domain.entity.GameSettings
 import com.cmex.calculationgame.domain.entity.Level
 import com.cmex.calculationgame.domain.entity.Question
@@ -30,6 +31,7 @@ object GameExecutionImpl:InterfaceGame {
         }
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onGenerateQuestion(sum: Int, numberAnswers: Int): Question {
         var flagAnswer=true
         val sumScreen=Random.nextInt(MIN_NUMBER,sum+1)
