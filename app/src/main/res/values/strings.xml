@@ -42,4 +42,5 @@
     <string name="level_average">средний</string>
     <string name="level_ease">легкий</string>
     <string name="level_test">тест</string>
+    <string name="question">\?</string>
 </resources>

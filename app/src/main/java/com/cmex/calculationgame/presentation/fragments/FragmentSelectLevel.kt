@@ -6,22 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.cmex.calculationgame.R
+import com.cmex.calculationgame.databinding.FragmentSelectLevelBinding
 
 
 class FragmentSelectLevel : Fragment() {
+       private lateinit var binding: FragmentSelectLevelBinding
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_select_level, container, false)
+         binding=FragmentSelectLevelBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     companion object {
