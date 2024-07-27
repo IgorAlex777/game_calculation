@@ -38,7 +38,8 @@ fun AppCompatActivity.utilOpenFragment(fragment: Fragment,name: String?){
         .commit()
 }
 
- fun Fragment.utilOpenFragment(fragment: Fragment,name: String?){
+ fun Fragment.utilOpenFragment(fragment: Fragment,name:String?){
+     myLog("name=$name")
      (activity as AppCompatActivity).supportFragmentManager.beginTransaction()
          .setCustomAnimations(android.R.anim.slide_in_left,android.R.anim.slide_out_right)
          .replace(R.id.container,fragment)

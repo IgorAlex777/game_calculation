@@ -40,6 +40,7 @@ android {
 
 dependencies {
     //start
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
     implementation ("androidx.fragment:fragment-ktx:1.8.0")
     //stop
 

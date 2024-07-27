@@ -6,7 +6,7 @@
         <shape>
             <gradient
                 android:type="radial"
-
+                android:gradientRadius="20%"
                 android:startColor="@color/whatsapp"
                 android:centerX="0.5"
                 android:centerY="0.5"
