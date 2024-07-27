@@ -54,7 +54,7 @@
     <Button
         android:id="@+id/btnStartGame"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginBottom="32dp"
         android:text="начать игру"
         app:layout_constraintBottom_toBottomOf="parent"
