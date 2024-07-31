@@ -6,4 +6,7 @@ data class Question (
     val sum:Int,
     val visibleNumber:Int,
     val listAnswer:List<Int>
-):Serializable
+):Serializable{
+    val correctAnswer:Int
+        get() = sum-visibleNumber
+}

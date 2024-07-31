@@ -14,42 +14,40 @@ object GameExecutionImpl:InterfaceGame {
     override fun onSettingGame(level: Level): GameSettings {
         return when(level){
             Level.TEST->{
-                GameSettings(10,3,0,20)
+                GameSettings(10,1,10,20)
             }
 
             Level.EASY->{
-                GameSettings(10,0,0,40)
+                GameSettings(10,20,40,40)
             }
 
             Level.AVERAGE->{
-                GameSettings(49,0,0,30)
+                GameSettings(49,20,40,30)
             }
 
             Level.HARD->{
-                GameSettings(99,0,0,20)
+                GameSettings(99,20,40,20)
             }
         }
     }
 
     @SuppressLint("SuspiciousIndentation")
     override fun onGenerateQuestion(sum: Int, numberAnswers: Int): Question {
-        var flagAnswer=true
-        val sumScreen=Random.nextInt(MIN_NUMBER,sum+1)
-          myLog("сумма=$sumScreen")
-        var numberTemp=0
+        val sumScreen=Random.nextInt(MIN_NUMBER,sum)
+         myLog("сумма=$sumScreen")
         val numberVisible=Random.nextInt(MIN_ANSWER,sumScreen)
-        myLog("видимое число=$numberVisible")
         val correctAnswer=sumScreen-numberVisible
         myLog("правильный ответ=$correctAnswer")
+        listAnswer.clear()
         listAnswer.add(correctAnswer)
 
         while(listAnswer.size<numberAnswers){
             listAnswer.add(Random.nextInt(MIN_ANSWER,sum))
         }
+
         val list= mutableListOf<Int>()
         list.addAll(listAnswer)
         list.shuffle()
-        myLog("ответы=${list.toList()}")
-        return Question(sum,numberVisible, list)
+        return Question(sumScreen,numberVisible, list)
     }
 }
