@@ -43,4 +43,6 @@
     <string name="level_ease">легкий</string>
     <string name="level_test">тест</string>
     <string name="question">\?</string>
+    <string name="minCountAnswer"> минимальное количество правильных ответов- %s </string>
+    <string name="CountAnswer">количество правильных ответов- %s </string>
 </resources>

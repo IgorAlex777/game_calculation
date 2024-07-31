@@ -37,6 +37,7 @@ class FragmentResult : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         onCheckingResult()
         onBackPressedFragment()
+        onSetTextView()
     }
     private fun onCheckingResult(){
         if(gameResult.winner){
@@ -54,6 +55,11 @@ class FragmentResult : Fragment() {
                 .error(R.drawable.circle)
                 .into(binding.ivResult)
         }
+    }
+    private fun onSetTextView()= with(binding){
+        tvMinCountAnswer.text= String.format(requireActivity().getString(R.string.minCountAnswer),
+            gameResult.gameSettings.minNumberCorrectAnswer)
+        tvCountAnswer.text= String.format((requireActivity().getString(R.string.CountAnswer)),gameResult.numberCorrectAnswers)
     }
     private fun goToSelection(){
         requireActivity().supportFragmentManager.popBackStack(ConstantsApp.NAME_FRAGMENT_GAME,
